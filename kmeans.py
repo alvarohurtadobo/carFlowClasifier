@@ -38,18 +38,19 @@ with open('countriesoftheworld.csv') as csvfile:
     #print(labels)
 
     colors = ["g.","r.","c."]
-    print('GRUPO 0')
+    print('### GRUPO 0 ###')
     for i in range(len(X)):
         #print("coordinate:",X[i], "label:", labels[i])
         if labels[i] == 0:
-            print(pais[i])
+            print('\t',pais[int(X[i][0])])
         plt.plot(X[i][0], X[i][1], colors[labels[i]], markersize = 10)
 
-    print('GRUPO 1')
+    print('### GRUPO 1 ###')
     for i in range(len(X)):
         #print("coordinate:",X[i], "label:", labels[i])
         if labels[i] == 1:
-            print(pais[i])
+            #print('\t',pais[X[i][0]])
+            print('\t',pais[int(X[i][0])])
 
 
     plt.scatter(centroids[:, 0],centroids[:, 1], marker = "x", s=150, linewidths = 5, zorder = 10)
